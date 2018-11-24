@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Challenge-2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+	</head>
+	      <script type="text/javascript">
+	 function fibo() {
+	 
+	 
+    var first,second,third,add;
+	 var x = document.forms["myForm"]["marks"].value;
+    if (x == null || x == "") {
+        alert("Please Enter Nth Term i.e. 4000");
+		
+
+ 
+        return false;
+    }
+	if(x<0 || x>4000){
+    alert("Value should be between 0 - 4000");
+    return;
+	}
+    for(var i=0;i<x;i++){
+        if(i === 0){
+            first = 1;
+            second = 1;
+			third = 1;
+			
+        }
+        if(first+second+third> Number.MAX_VALUE){
+            console.debug(i, first, second,third);
+            return;
+        }
+        add = first + second + third;
+        first = second;
+        second = add;
+    }
+    alert(add);
+}
+
+
+	
+      </script>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+			
+				<h1><strong> <u>Challenge-2</u></strong>
+								<form name="myForm"   onsubmit="return fibo()"  method="post">
+	  
+Enter nth term:  <input type="text" name="marks" placeholder="i.e. 4000,,">
+</br></br>
+<input type="submit" value="Calculate" bgcolor="#EFF5FB">
+</form>
+<p>Calculate the 4000'th fib3 number.
+Fib3 is defined as a Fibonacci sequence that uses the last 3 numbers to generate the next one (as opposed to the regular Fib)
+So the first 6 numbers from this sequence will be 1 1 1 3 5 9</p>
+				<br />
+
+				</header>
+
+		<!-- Main -->
+			<div id="main">	
+    
+				<!-- one -->
+					<section id="three">
+						<h2>Challenge-2</h2>
+					
+						<div class="row">
+							<div class="8u 12u$(small)">
+								<table align="center" border="0">
+<tr bgcolor="#eeeeee">
+
+<td colspan="111" align="center"><b><u>My Solution</u></td></tr>
+<tr>
+<td align="center" bgcolor="#A9D0F5"><b>First number</a></b></td> <td align="center" bgcolor="#EFF5FB"><b>1</a></b></td></tr>
+<tr>
+<td align="center" bgcolor="#A9D0F5"><b>Second number</a></b> </td><td align="center" bgcolor="#EFF5FB"><b>1</a></b></td></tr>
+<tr bgcolor="#eeeeee">
+<td align="center" bgcolor="#A9D0F5"><b>Third number</a></b></td><td align="center"  bgcolor="#EFF5FB"><b>1</a></b></td></tr>
+<tr bgcolor="#eeeeee">
+<td align="center" bgcolor="#A9D0F5"><b>Fourth number(1st fibo)</a></b></td><td align="center"  bgcolor="#EFF5FB"><b>3</a></b></td></tr>
+<tr>
+<td align="center" bgcolor="#A9D0F5"><b>Fifth number(2nd fibo)</a></b></td><td align="center" bgcolor="#EFF5FB"><b>5</a></b></td></tr>
+<tr>
+<td align="center" bgcolor="#A9D0F5" ><b>Sixth number(3rd fibo)</a></b></td><td align="center" bgcolor="#EFF5FB"><b>9</a></b></td></tr>
+<tr bgcolor="#F6CED8">
+<td align="center"><b>Seventh number(4th fibo)</b></td><td align="center"><b>15</a></b></td></tr>
+<td align="center"><b>1000'th number(1000th fibo)</b></td><td align="center"><b>2.275938507967204e+209</a></b></td></tr>
+<td colspan="111" align="center"><b class="8u 12u$(small)"><p>These proceeds upto 4000'th which takes more time to execute</p><p> depending on your machine processor</p></td></tr>
+</tr>
+								
+							</div>
+
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				
+				<ul class="copyright">
+					<li>&copy; 2016</li><li>Designed by, Michael Orenge</li>
+				</ul>
+			</footer>	
+
+	</body>
+</html>
